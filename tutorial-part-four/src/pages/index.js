@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 import { css } from "react-emotion"
 import { rhythm } from "../utils/typography"
@@ -9,6 +10,11 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <meta name="test" content="test" />
+          <title>My Title</title>
+        </Helmet>
         <h1 className={css`
           display: inline-block;
           border-bottom: 1px solid;
